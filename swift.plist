@@ -51,6 +51,7 @@
 		<string>return</string>
 		<string>switch</string>
 		<string>where</string>
+		<string>repeat</string>
 		<string>while</string>
 		<string>guard</string>
 		<string>throw</string>
@@ -117,6 +118,7 @@
 		<string>#if</string>
 		<string>#endif</string>
 		<string>#else</string>
+		<string>#elseif</string>
 		<string>final</string>
 		<string>defer</string>
 		<string>@IBOutlet</string>
@@ -281,6 +283,7 @@
 		<string>UInt64</string>
 		<string>UInt8</string>
 		<string>UIntMax</string>
+		<string>URL</string>
 		<string>UTF16</string>
 		<string>UTF32</string>
 		<string>UTF8</string>
