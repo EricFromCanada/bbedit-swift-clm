@@ -119,6 +119,12 @@
 		<string>#else</string>
 		<string>final</string>
 		<string>defer</string>
+		<string>@IBOutlet</string>
+		<string>@NSApplicationMain</string>
+		<string>@objcMembers</string>
+		<string>@dynamicMemberLookup</string>
+		<string>@inlinable</string>
+		<string>@usableFromInline</string>
 	</array>
 	<key>BBLMPredefinedNameList</key>
 	<array>
