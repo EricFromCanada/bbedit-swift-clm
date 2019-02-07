@@ -398,56 +398,55 @@
 		<string>A-Za-z_0-9@\#</string>
 		<key>Comment Pattern</key>
 		<string><![CDATA[(?x:
-			(?>  //  [^\r]*              \r)    (?# single line comment)
-		  | (?>  /\* (                          (?# multiline comment)
-		  					[^/*] 
-		  			  	|	/(?=[^*])	(?# a "/" not followed by "*")
-		  			  	|	\*(?=[^/])	(?# a "*" not followed by "/")
-		  				|	\r
-		  				|	(?R)		(?# recursive match to handle nested comments)
-		  			 )*? 
-		  		 \*/)
+			(?>	//	[^\r]*	\r)		(?# single line comment)
+		|	(?>	/\*	(				(?# multiline comment)
+						[^/*]
+					|	/(?=[^*])	(?# a "/" not followed by "*")
+					|	\*(?=[^/])	(?# a "*" not followed by "/")
+					|	\r
+					|	(?R)		(?# recursive match to handle nested comments)
+					)*?
+				\*/
+			)
 		)]]></string>
 		<key>String Pattern</key>
-        <string><![CDATA[(?x:
-            """(?s).*?"""
-            |
-            (?> "   (
-                        [^"\r\\]    (?# match anything potential ending quote, new line, or start of escape sequence)
-                    |   \\.         (?# match any escape sequence pair)
-                    )*?
-                "
-            )
-        )]]></string>
+		<string><![CDATA[(?x:
+			"""(?s).*?"""
+		|	(?>	"	(
+						[^"\r\\]	(?# match anything potential ending quote, new line, or start of escape sequence)
+					|	\\.			(?# match any escape sequence pair)
+					)*?
+				"
+			)
+		)]]></string>
 		<key>Function Pattern</key>
-        <string><![CDATA[(?x:
-            (?>
-                (?P<function>
-                    (^|\s)
-                    (?# we have to match all the names in one go to bind function_name, so we have to match the name and then all possible following stuff separately)
-                    ((?P<braces>func)|class\s+func|class|enum|struct|protocol|extension|typealias)
-                    \s+
-                    (?P<function_name>
-                        [A-Za-z_=<][A-Za-z_0-9=]*
-                    )
-                    (
-                        \s* = \s* .*    (?# typealias existing type)
-                    |
-                        (?(<braces>)    (?# since we can't do nested matches, only match braces for functions)
-                            [^{]*
-                            (?P<block>                          (?# body)
-                                {                               (?# literal lbrace)
-                                    (?>
-                                        (?> [^{}]+ )
-                                      | (?P>block)              (?# recursion!)
-                                    )*
-                                }                               (?# literal rbrace)
-                            )
-                        )
-                    )
-                )
-            )
-        )]]></string>
+		<string><![CDATA[(?x:
+			(?>
+				(?P<function>
+					(^|\s)
+					(?# we have to match all the names in one go to bind function_name, so we have to match the name and then all possible following stuff separately)
+					((?P<braces>func)|class\s+func|class|enum|struct|protocol|extension|typealias)
+					\s+
+					(?P<function_name>
+						[A-Za-z_=<][A-Za-z_0-9=]*
+					)
+					(
+						\s* = \s* .*	(?# typealias existing type)
+					|	(?(<braces>)	(?# since we can't do nested matches, only match braces for functions)
+							[^{]*
+							(?P<block>							(?# body)
+								{								(?# literal lbrace)
+									(?>
+										(?> [^{}]+ )
+									|	(?P>block)				(?# recursion!)
+									)*
+								}								(?# literal rbrace)
+							)
+						)
+					)
+				)
+			)
+		)]]></string>
 		<key>Skip Pattern</key>
 		<string><![CDATA[(?x:
 			(?P>string) |
