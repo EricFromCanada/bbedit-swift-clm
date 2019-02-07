@@ -94,9 +94,6 @@
 		<string>unowned(unsafe)</string>
 		<string>weak</string>
 		<string>willSet</string>
-		<string>nil</string>
-		<string>true</string>
-		<string>false</string>
 		<string>@available</string>
 		<string>@_fixed_layout</string>
 		<string>@escaping</string>
@@ -419,6 +416,17 @@
 				"
 			)
 		)]]></string>
+		<key>Number Pattern</key>
+		<string><![CDATA[(?x:
+			(?>	-?\b(
+						(?<!\$)(?P<dec>\d[\d_]*)(\.(?P>dec))?([eE][-+]?(?P>dec))?			(?# decimal/floating point literal)
+					|	0x(?P<hex>[\da-fA-F][\da-fA-F_]*)((\.(?P>hex))?[pP][-+]?(?P>dec))?	(?# hexadecimal/floating point literal)
+					|	0b[01][01_]*	|	0o[0-7][0-7_]*									(?# binary, octal literals)
+					)
+				\b
+			|	\b(true|false|nil)\b
+			)
+		)]]></string>
 		<key>Function Pattern</key>
 		<string><![CDATA[(?x:
 			(?>
@@ -458,6 +466,7 @@
 		)]]></string>
 		<key>Skip Pattern</key>
 		<string><![CDATA[(?x:
+			(?P>number) |
 			(?P>string) |
 			(?P>comment)
 		)]]></string>
