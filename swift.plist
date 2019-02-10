@@ -12,6 +12,8 @@
 	<true/>
 	<key>BBLMIsCaseSensitive</key>
 	<true/>
+	<key>BBLMReferenceSearchURLTemplate</key>
+	<string>https://developer.apple.com/search/?q=__SYMBOLNAME__&amp;type=Reference</string>
 	<key>BBLMKeywordList</key>
 	<array><!-- keywords -->
 		<!-- declarations -->
