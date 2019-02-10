@@ -73,7 +73,7 @@
 		<string>Self</string>
 		<string>super</string>
 		<string>Type</string>
-		<!-- context sensitive "keywords" -->
+		<!-- attributes and context-sensitive "keywords" -->
 		<string>_</string>
 		<string>@autoclosure</string>
 		<string>@available</string>
@@ -148,246 +148,362 @@
 		<string>unsafe</string>
 	</array>
 	<key>BBLMPredefinedNameList</key>
-	<array>
-		<!-- standard library -->
-		<string>AbsoluteValuable</string>
+	<array><!-- standard library -->
+		<!-- types -->
+		<string>AnyBidirectionalCollection</string>
+		<string>AnyCollection</string>
+		<string>AnyHashable</string>
+		<string>AnyIndex</string>
+		<string>AnyIterator</string>
+		<string>AnyKeyPath</string>
+		<string>AnyRandomAccessCollection</string>
+		<string>AnySequence</string>
+		<string>Array</string>
+		<string>ArraySlice</string>
+		<string>AutoreleasingUnsafeMutablePointer</string>
+		<string>Bool</string>
+		<string>CVaListPointer</string>
+		<string>Character</string>
+		<string>Character.UnicodeScalarView</string>
+		<string>Character.UnicodeScalarView.Index</string>
+		<string>Character.UnicodeScalarView.Iterator</string>
+		<string>ClosedRange</string>
+		<string>ClosedRange.Index</string>
+		<string>CodingUserInfoKey</string>
+		<string>CollectionOfOne</string>
+		<string>CommandLine</string>
+		<string>ContiguousArray</string>
+		<string>DecodingError</string>
+		<string>DecodingError.Context</string>
+		<string>DefaultIndices</string>
+		<string>Dictionary</string>
+		<string>Dictionary.Index</string>
+		<string>Dictionary.Keys</string>
+		<string>Dictionary.Values</string>
+		<string>DictionaryIterator</string>
+		<string>DictionaryLiteral</string>
+		<string>Double</string>
+		<string>EmptyCollection</string>
+		<string>EmptyCollection.Iterator</string>
+		<string>EncodingError</string>
+		<string>EncodingError.Context</string>
+		<string>EnumeratedIterator</string>
+		<string>EnumeratedSequence</string>
+		<string>FlattenCollection</string>
+		<string>FlattenCollection.Index</string>
+		<string>FlattenSequence</string>
+		<string>FlattenSequence.Iterator</string>
+		<string>Float</string>
+		<string>Float80</string>
+		<string>FloatingPointClassification</string>
+		<string>FloatingPointRoundingRule</string>
+		<string>FloatingPointSign</string>
+		<string>Hasher</string>
+		<string>IndexingIterator</string>
+		<string>Int</string>
+		<string>Int.Words</string>
+		<string>Int16</string>
+		<string>Int16.Words</string>
+		<string>Int32</string>
+		<string>Int32.Words</string>
+		<string>Int64</string>
+		<string>Int64.Words</string>
+		<string>Int8</string>
+		<string>Int8.Words</string>
+		<string>IteratorOverOne</string>
+		<string>IteratorSequence</string>
+		<string>JoinedSequence</string>
+		<string>JoinedSequence.Iterator</string>
+		<string>KeyPath</string>
+		<string>KeyedDecodingContainer</string>
+		<string>KeyedEncodingContainer</string>
+		<string>LazyCollection</string>
+		<string>LazyDropWhileCollection</string>
+		<string>LazyDropWhileCollection.Index</string>
+		<string>LazyDropWhileSequence</string>
+		<string>LazyDropWhileSequence.Iterator</string>
+		<string>LazyFilterCollection</string>
+		<string>LazyFilterSequence</string>
+		<string>LazyFilterSequence.Iterator</string>
+		<string>LazyMapCollection</string>
+		<string>LazyMapSequence</string>
+		<string>LazyMapSequence.Iterator</string>
+		<string>LazyPrefixWhileCollection</string>
+		<string>LazyPrefixWhileCollection.Index</string>
+		<string>LazyPrefixWhileSequence</string>
+		<string>LazyPrefixWhileSequence.Iterator</string>
+		<string>LazySequence</string>
+		<string>ManagedBuffer</string>
+		<string>ManagedBufferPointer</string>
+		<string>MemoryLayout</string>
+		<string>Mirror</string>
+		<string>Mirror.AncestorRepresentation</string>
+		<string>Mirror.DisplayStyle</string>
+		<string>Never</string>
+		<string>ObjectIdentifier</string>
+		<string>OpaquePointer</string>
+		<string>Optional</string>
+		<string>PartialKeyPath</string>
+		<string>PartialRangeFrom</string>
+		<string>PartialRangeFrom.Iterator</string>
+		<string>PartialRangeThrough</string>
+		<string>PartialRangeUpTo</string>
+		<string>PlaygroundQuickLook</string>
+		<string>Range</string>
+		<string>ReferenceWritableKeyPath</string>
+		<string>Repeated</string>
+		<string>ReversedCollection</string>
+		<string>ReversedCollection.Index</string>
+		<string>ReversedCollection.Iterator</string>
+		<string>Set</string>
+		<string>Set.Index</string>
+		<string>SetIterator</string>
+		<string>Slice</string>
+		<string>StaticString</string>
+		<string>StrideThrough</string>
+		<string>StrideThroughIterator</string>
+		<string>StrideTo</string>
+		<string>StrideToIterator</string>
+		<string>String</string>
+		<string>String.Index</string>
+		<string>String.UTF16View</string>
+		<string>String.UTF16View.Index</string>
+		<string>String.UTF16View.Indices</string>
+		<string>String.UTF8View</string>
+		<string>String.UTF8View.Iterator</string>
+		<string>String.UnicodeScalarView</string>
+		<string>String.UnicodeScalarView.Iterator</string>
+		<string>Substring</string>
+		<string>Substring.UTF16View</string>
+		<string>Substring.UTF8View</string>
+		<string>Substring.UnicodeScalarView</string>
+		<string>SystemRandomNumberGenerator</string>
+		<string>UInt</string>
+		<string>UInt.Words</string>
+		<string>UInt16</string>
+		<string>UInt16.Words</string>
+		<string>UInt32</string>
+		<string>UInt32.Words</string>
+		<string>UInt64</string>
+		<string>UInt64.Words</string>
+		<string>UInt8</string>
+		<string>UInt8.Words</string>
+		<string>UnboundedRange_</string>
+		<string>UnfoldSequence</string>
+		<string>Unicode</string>
+		<string>Unicode.ASCII</string>
+		<string>Unicode.ASCII.Parser</string>
+		<string>Unicode.ParseResult</string>
+		<string>Unicode.Scalar</string>
+		<string>Unicode.Scalar.UTF16View</string>
+		<string>Unicode.UTF16</string>
+		<string>Unicode.UTF16.ForwardParser</string>
+		<string>Unicode.UTF16.ReverseParser</string>
+		<string>Unicode.UTF32</string>
+		<string>Unicode.UTF32.Parser</string>
+		<string>Unicode.UTF8</string>
+		<string>Unicode.UTF8.ForwardParser</string>
+		<string>Unicode.UTF8.ReverseParser</string>
+		<string>UnicodeDecodingResult</string>
+		<string>Unmanaged</string>
+		<string>UnsafeBufferPointer</string>
+		<string>UnsafeBufferPointer.Iterator</string>
+		<string>UnsafeMutableBufferPointer</string>
+		<string>UnsafeMutablePointer</string>
+		<string>UnsafeMutableRawBufferPointer</string>
+		<string>UnsafeMutableRawPointer</string>
+		<string>UnsafePointer</string>
+		<string>UnsafeRawBufferPointer</string>
+		<string>UnsafeRawBufferPointer.Iterator</string>
+		<string>UnsafeRawPointer</string>
+		<string>WritableKeyPath</string>
+		<string>Zip2Sequence</string>
+		<string>Zip2Sequence.Iterator</string>
+		<!-- type aliases -->
 		<string>AnyClass</string>
 		<string>AnyObject</string>
-		<string>Array</string>
-		<string>ArrayBound</string>
-		<string>ArrayBuffer</string>
-		<string>ArrayBufferType</string>
-		<string>ArrayLiteralConvertible</string>
-		<string>ArrayType</string>
-		<string>AutoreleasingUnsafePointer</string>
-		<string>BidirectionalIndex</string>
-		<string>Bit</string>
-		<string>BitwiseOperations</string>
-		<string>Bool</string>
+		<string>BidirectionalIndexable</string>
+		<string>BidirectionalSlice</string>
+		<string>BooleanLiteralType</string>
 		<string>CBool</string>
 		<string>CChar</string>
 		<string>CChar16</string>
 		<string>CChar32</string>
-		<string>CConstPointer</string>
-		<string>CConstVoidPointer</string>
 		<string>CDouble</string>
 		<string>CFloat</string>
 		<string>CInt</string>
 		<string>CLong</string>
+		<string>CLongDouble</string>
 		<string>CLongLong</string>
-		<string>CMutablePointer</string>
-		<string>CMutableVoidPointer</string>
-		<string>COpaquePointer</string>
+		<string>ClosedRangeIndex</string>
+		<string>Codable</string>
+		<string>CountableClosedRange</string>
+		<string>CountablePartialRangeFrom</string>
+		<string>CountableRange</string>
 		<string>CShort</string>
 		<string>CSignedChar</string>
-		<string>CString</string>
 		<string>CUnsignedChar</string>
 		<string>CUnsignedInt</string>
 		<string>CUnsignedLong</string>
 		<string>CUnsignedLongLong</string>
 		<string>CUnsignedShort</string>
-		<string>CVaListPointer</string>
-		<string>CVarArg</string>
 		<string>CWideChar</string>
-		<string>Character</string>
-		<string>CharacterLiteralConvertible</string>
-		<string>Collection</string>
-		<string>CollectionOfOne</string>
-		<string>Comparable</string>
-		<string>ContiguousArray</string>
-		<string>ContiguousArrayBuffer</string>
-		<string>ContiguousArrayStorage</string>
-		<string>Data</string>
-		<string>Date</string>
-		<string>DebugPrintable</string>
-		<string>Dictionary</string>
-		<string>DictionaryGenerator</string>
+		<string>DefaultBidirectionalIndices</string>
+		<string>DefaultRandomAccessIndices</string>
 		<string>DictionaryIndex</string>
-		<string>DictionaryLiteralConvertible</string>
-		<string>Double</string>
-		<string>EmptyCollection</string>
-		<string>EmptyGenerator</string>
-		<string>EnumerateGenerator</string>
-		<string>Equatable</string>
-		<string>ExtendedGraphemeClusterLiteralConvertible</string>
+		<string>EmptyIterator</string>
+		<string>ExpressibleByStringInterpolation</string>
 		<string>ExtendedGraphemeClusterType</string>
-		<string>ExtensibleCollection</string>
-		<string>FilterCollectionView</string>
-		<string>FilterCollectionViewIndex</string>
-		<string>FilterGenerator</string>
-		<string>FilterSequenceView</string>
-		<string>Float</string>
+		<string>FlattenBidirectionalCollection</string>
+		<string>FlattenBidirectionalCollectionIndex</string>
+		<string>FlattenCollectionIndex</string>
 		<string>Float32</string>
 		<string>Float64</string>
-		<string>Float80</string>
-		<string>FloatLiteralConvertible</string>
 		<string>FloatLiteralType</string>
-		<string>FloatingPointClassification</string>
-		<string>FloatingPointNumber</string>
-		<string>ForwardIndex</string>
-		<string>Generator</string>
-		<string>GeneratorOf</string>
-		<string>GeneratorOfOne</string>
-		<string>GeneratorSequence</string>
-		<string>Hashable</string>
-		<string>HeapBuffer</string>
-		<string>HeapBufferStorage</string>
-		<string>HeapBufferStorageBase</string>
-		<string>ImplicitlyUnwrappedOptional</string>
-		<string>IndexingGenerator</string>
-		<string>IndirectArrayBuffer</string>
-		<string>Int</string>
-		<string>Int16</string>
-		<string>Int32</string>
-		<string>Int64</string>
-		<string>Int8</string>
-		<string>IntEncoder</string>
-		<string>IntMax</string>
-		<string>Integer</string>
-		<string>IntegerArithmetic</string>
-		<string>IntegerLiteralConvertible</string>
+		<string>Indexable</string>
+		<string>IndexableBase</string>
 		<string>IntegerLiteralType</string>
-		<string>Less</string>
-		<string>LifetimeManager</string>
-		<string>LogicValue</string>
-		<string>MapCollectionView</string>
-		<string>MapSequenceGenerator</string>
-		<string>MapSequenceView</string>
-		<string>MaxBuiltinFloatType</string>
-		<string>MaxBuiltinIntegerType</string>
-		<string>Mirror</string>
-		<string>MirrorDisposition</string>
-		<string>MutableCollection</string>
-		<string>MutableSliceable</string>
-		<string>ObjectIdentifier</string>
-		<string>OnHeap</string>
-		<string>Optional</string>
-		<string>OutputStream</string>
-		<string>PermutationGenerator</string>
-		<string>Printable</string>
-		<string>QuickLookObject</string>
-		<string>RandomAccessIndex</string>
-		<string>Range</string>
-		<string>RangeGenerator</string>
-		<string>RawByte</string>
-		<string>RawOptionSet</string>
-		<string>RawRepresentable</string>
-		<string>Reflectable</string>
-		<string>Repeat</string>
-		<string>ReverseIndex</string>
-		<string>ReverseRange</string>
-		<string>ReverseRangeGenerator</string>
-		<string>ReverseView</string>
-		<string>Sequence</string>
-		<string>SequenceOf</string>
-		<string>SignedInteger</string>
-		<string>SignedNumber</string>
-		<string>Sink</string>
-		<string>SinkOf</string>
-		<string>Slice</string>
-		<string>SliceBuffer</string>
-		<string>Sliceable</string>
-		<string>StaticString</string>
-		<string>Streamable</string>
-		<string>StridedRangeGenerator</string>
-		<string>String</string>
-		<string>StringElement</string>
+		<string>JoinedIterator</string>
+		<string>LazyBidirectionalCollection</string>
+		<string>LazyDropWhileBidirectionalCollection</string>
+		<string>LazyDropWhileIndex</string>
+		<string>LazyDropWhileIterator</string>
+		<string>LazyFilterBidirectionalCollection</string>
+		<string>LazyFilterIndex</string>
+		<string>LazyFilterIterator</string>
+		<string>LazyMapBidirectionalCollection</string>
+		<string>LazyMapIterator</string>
+		<string>LazyMapRandomAccessCollection</string>
+		<string>LazyPrefixWhileBidirectionalCollection</string>
+		<string>LazyPrefixWhileIndex</string>
+		<string>LazyPrefixWhileIterator</string>
+		<string>LazyRandomAccessCollection</string>
+		<string>MutableBidirectionalSlice</string>
+		<string>MutableIndexable</string>
+		<string>MutableRandomAccessSlice</string>
+		<string>MutableRangeReplaceableBidirectionalSlice</string>
+		<string>MutableRangeReplaceableRandomAccessSlice</string>
+		<string>MutableRangeReplaceableSlice</string>
+		<string>MutableSlice</string>
+		<string>RandomAccessIndexable</string>
+		<string>RandomAccessSlice</string>
+		<string>RangeReplaceableBidirectionalSlice</string>
+		<string>RangeReplaceableIndexable</string>
+		<string>RangeReplaceableRandomAccessSlice</string>
+		<string>RangeReplaceableSlice</string>
+		<string>ReversedIndex</string>
+		<string>ReversedRandomAccessCollection</string>
+		<string>SetIndex</string>
 		<string>StringInterpolationConvertible</string>
-		<string>StringLiteralConvertible</string>
 		<string>StringLiteralType</string>
-		<string>UInt</string>
-		<string>UInt16</string>
-		<string>UInt32</string>
-		<string>UInt64</string>
-		<string>UInt8</string>
-		<string>UIntMax</string>
-		<string>URL</string>
+		<string>UnboundedRange</string>
+		<string>UnfoldFirstSequence</string>
+		<string>UnicodeScalar</string>
+		<string>UnicodeScalarType</string>
+		<string>UnsafeBufferPointerIterator</string>
+		<string>UnsafeMutableRawBufferPointerIterator</string>
+		<string>UnsafeRawBufferPointerIterator</string>
 		<string>UTF16</string>
 		<string>UTF32</string>
 		<string>UTF8</string>
-		<string>UWord</string>
-		<string>UnicodeCodec</string>
-		<string>UnicodeScalar</string>
-		<string>Unmanaged</string>
-		<string>UnsafeArray</string>
-		<string>UnsafePointer</string>
-		<string>UnsignedInteger</string>
-		<string>VaListBuilder</string>
 		<string>Void</string>
-		<string>Word</string>
-		<string>Zip2</string>
-		<string>ZipGenerator2</string>
+		<string>Zip2Iterator</string>
+		<!-- protocols -->
+		<string>BidirectionalCollection</string>
+		<string>BinaryFloatingPoint</string>
+		<string>BinaryInteger</string>
+		<string>CVarArg</string>
+		<string>CaseIterable</string>
+		<string>CodingKey</string>
+		<string>Collection</string>
+		<string>Comparable</string>
+		<string>CustomDebugStringConvertible</string>
+		<string>CustomLeafReflectable</string>
+		<string>CustomPlaygroundDisplayConvertible</string>
+		<string>CustomPlaygroundQuickLookable</string>
+		<string>CustomReflectable</string>
+		<string>CustomStringConvertible</string>
+		<string>Decodable</string>
+		<string>Decoder</string>
+		<string>Encodable</string>
+		<string>Encoder</string>
+		<string>Equatable</string>
+		<string>Error</string>
+		<string>ExpressibleByArrayLiteral</string>
+		<string>ExpressibleByBooleanLiteral</string>
+		<string>ExpressibleByDictionaryLiteral</string>
+		<string>ExpressibleByExtendedGraphemeClusterLiteral</string>
+		<string>ExpressibleByFloatLiteral</string>
+		<string>ExpressibleByIntegerLiteral</string>
+		<string>ExpressibleByNilLiteral</string>
+		<string>ExpressibleByStringLiteral</string>
+		<string>ExpressibleByUnicodeScalarLiteral</string>
+		<string>FixedWidthInteger</string>
+		<string>FloatingPoint</string>
+		<string>Hashable</string>
+		<string>IteratorProtocol</string>
+		<string>KeyedDecodingContainerProtocol</string>
+		<string>KeyedEncodingContainerProtocol</string>
+		<string>LazyCollectionProtocol</string>
+		<string>LazySequenceProtocol</string>
+		<string>LosslessStringConvertible</string>
+		<string>MirrorPath</string>
+		<string>MutableCollection</string>
+		<string>Numeric</string>
+		<string>OptionSet</string>
+		<string>RandomAccessCollection</string>
+		<string>RandomNumberGenerator</string>
+		<string>RangeExpression</string>
+		<string>RangeReplaceableCollection</string>
+		<string>RawRepresentable</string>
+		<string>Sequence</string>
+		<string>SetAlgebra</string>
+		<string>SignedInteger</string>
+		<string>SignedNumeric</string>
+		<string>SingleValueDecodingContainer</string>
+		<string>SingleValueEncodingContainer</string>
+		<string>Strideable</string>
+		<string>StringProtocol</string>
+		<string>TextOutputStream</string>
+		<string>TextOutputStreamable</string>
+		<string>UnicodeCodec</string>
+		<string>UnkeyedDecodingContainer</string>
+		<string>UnkeyedEncodingContainer</string>
+		<string>UnsignedInteger</string>
+		<string>_AppendKeyPath</string>
+		<string>_SequenceWrapper</string>
+		<!-- functions -->
 		<string>abs</string>
-		<string>advance</string>
-		<string>alignof</string>
-		<string>alignofValue</string>
 		<string>assert</string>
-		<string>bridgeFromObjectiveC</string>
-		<string>bridgeFromObjectiveCUnconditional</string>
-		<string>bridgeToObjectiveC</string>
-		<string>bridgeToObjectiveCUnconditional</string>
-		<string>c</string>
-		<string>contains</string>
-		<string>count</string>
-		<string>countElements</string>
-		<string>countLeadingZeros</string>
+		<string>assertionFailure</string>
 		<string>debugPrint</string>
-		<string>debugPrintln</string>
-		<string>distance</string>
-		<string>dropFirst</string>
-		<string>dropLast</string>
 		<string>dump</string>
-		<string>encodeBitsAsWords</string>
-		<string>enumerate</string>
-		<string>equal</string>
 		<string>fatalError</string>
-		<string>filter</string>
-		<string>find</string>
-		<string>getBridgedObjectiveCType</string>
 		<string>getVaList</string>
-		<string>indices</string>
-		<string>insertionSort</string>
-		<string>isBridgedToObjectiveC</string>
-		<string>isBridgedVerbatimToObjectiveC</string>
-		<string>isUniquelyReferenced</string>
-		<string>join</string>
-		<string>lexicographicalCompare</string>
-		<string>map</string>
+		<string>isKnownUniquelyReferenced</string>
 		<string>max</string>
-		<string>maxElement</string>
 		<string>min</string>
-		<string>minElement</string>
 		<string>numericCast</string>
-		<string>partition</string>
-		<string>posix</string>
+		<string>precondition</string>
+		<string>preconditionFailure</string>
 		<string>print</string>
-		<string>println</string>
-		<string>quickSort</string>
-		<string>reduce</string>
-		<string>reflect</string>
-		<string>reinterpretCast</string>
-		<string>reverse</string>
-		<string>roundUpToAlignment</string>
-		<string>sizeof</string>
-		<string>sizeofValue</string>
-		<string>sort</string>
-		<string>split</string>
-		<string>startsWith</string>
-		<string>strideof</string>
-		<string>strideofValue</string>
+		<string>readLine</string>
+		<string>repeatElement</string>
+		<string>sequence</string>
+		<string>stride</string>
 		<string>swap</string>
-		<string>swift</string>
-		<string>toString</string>
 		<string>transcode</string>
-		<string>underestimateCount</string>
-		<string>unsafeReflect</string>
+		<string>type</string>
+		<string>unsafeBitCast</string>
+		<string>unsafeDowncast</string>
 		<string>withExtendedLifetime</string>
-		<string>withObjectAtPlusZero</string>
+		<string>withUnsafeBytes</string>
+		<string>withUnsafeMutableBytes</string>
+		<string>withUnsafeMutablePointer</string>
 		<string>withUnsafePointer</string>
-		<string>withUnsafePointerToObject</string>
-		<string>withUnsafePointers</string>
 		<string>withVaList</string>
-		<string>autoreleasepool</string>
+		<string>withoutActuallyEscaping</string>
+		<string>zip</string>
 	</array>
 	<key>BBLMSuffixMap</key>
 	<array>
@@ -413,7 +529,7 @@
 	<key>Language Features</key>
 	<dict>
 		<key>Identifier and Keyword Character Class</key>
-		<string>A-Za-z_0-9@#\xA8\xAA\xAD\xAF\xB2-\xB5\xB7-\xBA\xBC-\xBE\xC0-\xD6\xD8-\xF6\xF8-\xFF\x{100}-\x{2FF}\x{370}-\x{167F}\x{1681}-\x{180D}\x{180F}-\x{1DBF}\x{1E00}-\x{1FFF}\x{200B}-\x{200D}\x{202A}-\x{202E}\x{203F}-\x{2040}\x{2054}\x{2060}-\x{206F}\x{2070}-\x{20CF}\x{2100}-\x{218F}\x{2460}-\x{24FF}\x{2776}-\x{2793}\x{2C00}-\x{2DFF}\x{2E80}-\x{2FFF}\x{3004}-\x{3007}\x{3021}-\x{302F}\x{3031}-\x{303F}\x{3040}-\x{D7FF}\x{F900}-\x{FD3D}\x{FD40}-\x{FDCF}\x{FDF0}-\x{FE1F}\x{FE30}-\x{FE44}\x{FE47}-\x{FFFD}\x{300}-\x{36F}\x{1DC0}-\x{1DFF}\x{20D0}-\x{20FF}\x{FE20}-\x{FE2F}</string>
+		<string>A-Za-z_0-9@#.\xA8\xAA\xAD\xAF\xB2-\xB5\xB7-\xBA\xBC-\xBE\xC0-\xD6\xD8-\xF6\xF8-\xFF\x{100}-\x{2FF}\x{370}-\x{167F}\x{1681}-\x{180D}\x{180F}-\x{1DBF}\x{1E00}-\x{1FFF}\x{200B}-\x{200D}\x{202A}-\x{202E}\x{203F}-\x{2040}\x{2054}\x{2060}-\x{206F}\x{2070}-\x{20CF}\x{2100}-\x{218F}\x{2460}-\x{24FF}\x{2776}-\x{2793}\x{2C00}-\x{2DFF}\x{2E80}-\x{2FFF}\x{3004}-\x{3007}\x{3021}-\x{302F}\x{3031}-\x{303F}\x{3040}-\x{D7FF}\x{F900}-\x{FD3D}\x{FD40}-\x{FDCF}\x{FDF0}-\x{FE1F}\x{FE30}-\x{FE44}\x{FE47}-\x{FFFD}\x{300}-\x{36F}\x{1DC0}-\x{1DFF}\x{20D0}-\x{20FF}\x{FE20}-\x{FE2F}</string>
 		<key>Comment Pattern</key>
 		<string><![CDATA[(?x:
 			(?>	//	[^\r]*	\r)		(?# single line comment)
