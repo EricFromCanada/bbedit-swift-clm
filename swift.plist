@@ -549,7 +549,7 @@
 		<string><![CDATA[(?x:
 			"""(?s).*?"""
 		|	(?>	"	(
-						[^"\r\\]	(?# match anything potential ending quote, new line, or start of escape sequence)
+						[^"\r\\]	(?# match anything but a potential ending quote, new line, or start of escape sequence)
 					|	\\.			(?# match any escape sequence pair)
 					)*?
 				"
@@ -571,7 +571,7 @@
 			(?>
 				(?P<function>
 					(^|\s)
-					(?# we have to match all the names in one go to bind function_name, so we have to match the name and then all possible following stuff separately)
+					(?# we have to match all the names in one go to bind function_name, so we match the name and then all possible following stuff separately)
 					((?P<braces>func)|class\s+func|class|enum|struct|protocol|extension|typealias)
 					\s+
 					(?P<function_name>
